@@ -7,7 +7,7 @@ from algoritmos.guloso import solucao_gulosa
 with open('csvs/dados.csv',mode='w',encoding='utf-8',newline='') as nome_arquivo:
     file_csv = csv.writer(nome_arquivo,delimiter=',')
     file_csv.writerow(['n','C(n)','S(n)','paradigma'])
-    for i in range(1,30+1):
+    for i in range(1,25+1):
         print(i)
         elementos = [randint(0,i) for j in range(i)]
         n = i

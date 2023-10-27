@@ -25,6 +25,7 @@ def plot2DComplexidade(dfFB,dfPD,dfGUL,filename):
   plt.savefig(filename)
 
   plt.show()
+  
 def plot2DComplexidade2(dfPD,dfGUL,filename):
   fig = plt.figure()
   ax = fig.add_subplot(111)

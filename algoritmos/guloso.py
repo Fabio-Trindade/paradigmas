@@ -3,7 +3,7 @@ from math import ceil, log
 
 from numpy import argmax
 
-from pd import pd
+# from algoritmos.pd import pd
 
 
 # def solucao_gulosa(elementos: list, n:int):
@@ -31,10 +31,8 @@ def solucao_gulosa(elementos: list, n:int):
     return sum, execucoes
 
 if __name__ == '__main__':
-    elementos = [30,14,23,2,1,4,3,432,3]
+    elementos = [5,6,2,30,7]
     n = len(elementos)
     print(solucao_gulosa(elementos, n ))
-    print(pd(elementos, n ))
-    
-    
+    # print(pd(elementos, n ))
     # print(solucao_gulosa2(elementos, n ))

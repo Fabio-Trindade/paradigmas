@@ -1,5 +1,5 @@
 from copy import deepcopy
-import sys
+
 def gerar_string_bits(n:int) -> str:
     return ["0" for i in range(n)] 
 
@@ -10,12 +10,20 @@ def somar_1_string_bits(string_bits:list, pos:int) -> None:
     else:
         string_bits[pos] = "1"
 
+def gerar_conjunto_das_partes(n:int) -> list:
+    string_bits = gerar_string_bits(n)
+    strings_bits = []
+    for i in range(2**(n-1)):
+        strings_bits.append(deepcopy(string_bits))
+        somar_1_string_bits(string_bits,n-1)
+    return strings_bits
+
     
 def busca_exaustiva(elementos : list, n:int) -> (int,int):
-    string_bits = gerar_string_bits(n) 
+    strings_bits = gerar_conjunto_das_partes(n)
     min = 10**10
     execucoes = 0
-    for i in range(2**(n-1)): 
+    for string_bits in strings_bits: 
         sum = 0
         for i in range(n):
             execucoes += 1 # Contagem para gráfico de complexidade 
@@ -26,7 +34,6 @@ def busca_exaustiva(elementos : list, n:int) -> (int,int):
         sum = abs(sum)
         if sum < min:
             min = sum
-        somar_1_string_bits(string_bits,n-1) 
     return min,execucoes
         
 if __name__ == '__main__':
