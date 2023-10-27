@@ -16,7 +16,7 @@ def plot2DComplexidade(dfFB,dfPD,dfGUL,filename):
   # Plote as três funções em 3D usando plot_surface
   ax.plot(X1, Y1, label="C(n) - FB")
   ax.plot(X2, Y2, label="C(n) - OT")
-  ax.plot(X3, Y3, label="C(n) - GUL")
+  ax.plot(X3, Y3, label="C(n) - GL")
 
   # Configuração dos rótulos dos eixos
   ax.set_xlabel('Quantidade de itens (n)')
@@ -36,7 +36,7 @@ def plot2DComplexidade2(dfPD,dfGUL,filename):
 
   # Plote as três funções em 3D usando plot_surface
   ax.plot(X2, Y2, label="C(n) - OT")
-  ax.plot(X3, Y3, label="C(n) - GUL")
+  ax.plot(X3, Y3, label="C(n) - GL")
 
   # Configuração dos rótulos dos eixos
   ax.set_xlabel('Quantidade de itens (n)')
@@ -59,7 +59,7 @@ def plot2DSolucao(dfFB,dfPD,dfGUL,filename):
   # Plote as três funções em 3D usando plot_surface
   ax.plot(X1, Y1, label="C(n) - FB")
   ax.plot(X2, Y2, label="C(n) - OT")
-  ax.plot(X3, Y3, label="C(n) - GUL")
+  ax.plot(X3, Y3, label="C(n) - GL")
 
   # Configuração dos rótulos dos eixos
   ax.set_xlabel('Quantidade de itens (n)')
